@@ -1,0 +1,178 @@
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/400-italic.css";
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/dm-sans/400.css";
+@import "@fontsource/dm-sans/500.css";
+@import "@fontsource/dm-sans/700.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* InterLayer color palette */
+    --background: 240 15% 92%;
+    --foreground: 0 0% 5%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 5%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 5%;
+
+    --primary: 355 100% 70%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 35 100% 55%;
+    --secondary-foreground: 0 0% 5%;
+
+    --muted: 240 10% 85%;
+    --muted-foreground: 0 0% 35%;
+
+    --accent: 145 70% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 85%;
+    --ring: 355 100% 70%;
+
+    --radius: 0px;
+
+    /* Custom InterLayer colors */
+    --coral: 355 100% 70%;
+    --coral-dark: 355 100% 60%;
+    --periwinkle: 240 30% 90%;
+    --periwinkle-dark: 240 20% 85%;
+    --amber: 40 95% 55%;
+    --pink-section: 345 80% 75%;
+    --cream: 40 30% 92%;
+    --live-green: 145 70% 45%;
+
+    /* Typography */
+    --font-serif: "Playfair Display", Georgia, serif;
+    --font-sans: "DM Sans", system-ui, sans-serif;
+
+    /* Shadows */
+    --shadow-button: 4px 4px 0px 0px hsl(0 0% 5%);
+    --shadow-button-hover: 2px 2px 0px 0px hsl(0 0% 5%);
+    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer components {
+  .window-chrome {
+    @apply bg-card border-2 border-foreground;
+  }
+
+  .window-title-bar {
+    @apply flex items-center gap-2 px-3 py-1.5 border-b-2 border-foreground bg-card text-xs font-medium uppercase tracking-wider;
+  }
+
+  .window-indicator {
+    @apply w-2.5 h-2.5 border border-foreground;
+  }
+
+  .window-indicator-coral {
+    @apply bg-primary;
+  }
+
+  .window-indicator-green {
+    @apply bg-accent;
+  }
+
+  .window-indicator-amber {
+    @apply bg-secondary;
+  }
+
+  .dither-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='4' height='4' viewBox='0 0 4 4' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='1' fill='%23000' fill-opacity='0.05'/%3E%3Crect x='2' y='2' width='1' height='1' fill='%23000' fill-opacity='0.05'/%3E%3C/svg%3E");
+  }
+
+  .marquee-scroll {
+    animation: marquee 30s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .pulse-dot {
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-dot {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+}
