@@ -1,5 +1,5 @@
 import 'dotenv/config'
-import restart from 'vite-plugin-restart'
+
 import wasm from 'vite-plugin-wasm'
 import topLevelAwait from 'vite-plugin-top-level-await'
 import basicSsl from '@vitejs/plugin-basic-ssl'
