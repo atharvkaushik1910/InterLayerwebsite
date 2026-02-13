@@ -23,7 +23,7 @@ export function Navigation() {
           <div className="flex items-center px-4 py-2 gap-2 h-full">
             <a href="/" className="flex items-center gap-2">
               <img
-                src="/src/assets/interlayer-logo.png"
+                src="/interlayer-logo.png"
                 alt="InterLayer"
                 className="h-6 w-auto object-contain"
               />
@@ -57,7 +57,7 @@ export function Navigation() {
         <div className="lg:hidden bg-card border-2 border-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center px-4 py-2 gap-2 h-12 pointer-events-auto">
           <a href="/" className="flex items-center gap-2">
             <img
-              src="/src/assets/interlayer-logo.png"
+              src="/interlayer-logo.png"
               alt="InterLayer"
               className="h-6 w-auto object-contain"
             />
