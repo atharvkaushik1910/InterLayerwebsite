@@ -26,6 +26,15 @@ export default {
             output: {
                 manualChunks(id) {
                     if (id.includes('node_modules')) {
+                        if (id.includes('three')) {
+                            return 'vendor_three';
+                        }
+                        if (id.includes('rapier')) {
+                            return 'vendor_rapier';
+                        }
+                        if (id.includes('gltf-transform')) {
+                            return 'vendor_gltf';
+                        }
                         return 'vendor';
                     }
                 }
