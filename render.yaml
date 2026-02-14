@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: folios-game
+    env: static
+    rootDir: pastel-pixels-ai/folio-game
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
