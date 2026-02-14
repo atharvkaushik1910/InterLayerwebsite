@@ -93,7 +93,7 @@ export function PalsGallerySection() {
                 </h3>
               </div>
               <div className="absolute bottom-4 right-4">
-                <a href="http://localhost:8000" target="_blank" rel="noopener noreferrer">
+                <a href={import.meta.env.VITE_SERVER_URL || "http://localhost:8000"} target="_blank" rel="noopener noreferrer">
                   <TavusButton variant="coral" size="default">
                     TRY INTERLAYER AGENT
                   </TavusButton>
