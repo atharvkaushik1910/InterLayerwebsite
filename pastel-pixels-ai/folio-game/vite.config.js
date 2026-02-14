@@ -18,7 +18,7 @@ export default {
     },
     build:
     {
-        outDir: '../../public/game', // Output in the dist/ folder
+        outDir: './dist', // Output in the dist/ folder
         emptyOutDir: true, // Empty the folder first
         sourcemap: false // Add sourcemap
     },
