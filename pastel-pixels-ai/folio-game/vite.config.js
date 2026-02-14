@@ -20,7 +20,17 @@ export default {
     {
         outDir: '../dist', // Output in the dist/ folder
         emptyOutDir: true, // Empty the folder first
-        sourcemap: false // Add sourcemap
+        sourcemap: false, // Add sourcemap
+        chunkSizeWarningLimit: 1600,
+        rollupOptions: {
+            output: {
+                manualChunks(id) {
+                    if (id.includes('node_modules')) {
+                        return 'vendor';
+                    }
+                }
+            }
+        }
     },
     plugins:
         [
