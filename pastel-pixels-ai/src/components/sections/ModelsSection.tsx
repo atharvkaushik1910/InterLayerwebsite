@@ -1,4 +1,4 @@
-import { TavusButton } from "@/components/ui/tavus-button";
+import { InterLayerButton } from "@/components/ui/interlayer-button";
 import modelsSeasonal from "@/assets/models-seasonal.jpg";
 
 const models = [
@@ -38,9 +38,9 @@ export function ModelsSection() {
             <p className="text-lg mb-8 max-w-lg">
               We build models that teach machines perception, empathy, and expression so AI can finally understand the world as we do.
             </p>
-            <TavusButton variant="coral" size="default">
+            <InterLayerButton variant="coral" size="default">
               OUR RESEARCH
-            </TavusButton>
+            </InterLayerButton>
           </div>
           <div>
             <img

@@ -1,8 +1,8 @@
-
+import React from 'react';
 import { Navigation } from "@/components/layout/Navigation";
 import { FooterCTA } from "@/components/sections/FooterCTA";
 import { WindowCard } from "@/components/ui/window-card";
-import { TavusButton } from "@/components/ui/tavus-button";
+import { InterLayerButton } from "@/components/ui/interlayer-button";
 import { Helmet } from "react-helmet-async";
 import { Check, ArrowRight, Play, Users, BarChart3, Shield, Monitor, MessageSquare, Zap } from "lucide-react";
 
@@ -28,12 +28,12 @@ export default function Enterprise() {
                         From first intent to execution — across sales, onboarding,support, and operations. InterLayer is deployed wherever enterprise workflows are complex, repetitive, and expensive to scale with humans.
                     </p>
                     <div className="flex gap-4 justify-center">
-                        <TavusButton size="lg" variant="coral" onClick={() => window.open('https://tavus.io/contact', '_blank')}>
+                        <InterLayerButton size="lg" variant="coral" onClick={() => window.open('https://calendly.com/atharvkaushik1910/new-meeting', '_blank')}>
                             REQUEST ENTERPRISE DEMO
-                        </TavusButton>
-                        <TavusButton size="lg" variant="outline" onClick={() => window.open('https://tavus.io/sales', '_blank')}>
+                        </InterLayerButton>
+                        <InterLayerButton size="lg" variant="outline" onClick={() => window.open('https://calendly.com/atharvkaushik1910/new-meeting', '_blank')}>
                             TALK TO SALES
-                        </TavusButton>
+                        </InterLayerButton>
                     </div>
                 </div>
 

@@ -34,7 +34,7 @@ class TavusClient:
             response.raise_for_status()
             return response.json()
         except requests.exceptions.HTTPError as e:
-            print(f"Tavus API Error: {e.response.text}") # Print full error details
+            print(f"API Error: {e.response.text}") # Print full error details
             raise e
         except Exception as e:
             print(f"An unexpected error occurred: {e}")

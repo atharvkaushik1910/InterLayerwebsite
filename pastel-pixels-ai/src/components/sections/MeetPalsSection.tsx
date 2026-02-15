@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { WindowCard } from "@/components/ui/window-card";
-import { TavusButton } from "@/components/ui/tavus-button";
+import { InterLayerButton } from "@/components/ui/interlayer-button";
 import { MessageSquare, Video, Phone, Volume2 } from "lucide-react";
 import palAshley from "@/assets/pal-ashley.png";
 
@@ -80,10 +80,10 @@ export function MeetPalsSection() {
                 <div className="flex items-center gap-3 mb-4">
                   <Volume2 size={18} />
                   <div className="flex-1 h-1 bg-foreground" />
-                  <TavusButton variant="green" size="sm">
+                  <InterLayerButton variant="green" size="sm">
                     <Phone size={14} />
                     LISTEN
-                  </TavusButton>
+                  </InterLayerButton>
                 </div>
                 <div className="flex items-center justify-center">
                   <div className="w-12 h-12 rounded-full bg-foreground flex items-center justify-center">

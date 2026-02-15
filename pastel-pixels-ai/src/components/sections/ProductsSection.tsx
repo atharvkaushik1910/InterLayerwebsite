@@ -1,6 +1,6 @@
 import { WindowCard } from "@/components/ui/window-card";
 import { Link } from "react-router-dom";
-import { TavusButton } from "@/components/ui/tavus-button";
+import { InterLayerButton } from "@/components/ui/interlayer-button";
 import retroComputer from "@/assets/retro-mac-sleek.png";
 
 const products = [
@@ -61,9 +61,9 @@ export function ProductsSection() {
                 <p className="text-sm text-muted-foreground mb-6">
                   {products[0].description}
                 </p>
-                <TavusButton variant="outline" size="sm">
+                <InterLayerButton variant="outline" size="sm" onClick={() => window.open('https://calendly.com/atharvkaushik1910/new-meeting', '_blank')}>
                   {products[0].cta}
-                </TavusButton>
+                </InterLayerButton>
               </div>
             </WindowCard>
 
@@ -80,9 +80,9 @@ export function ProductsSection() {
                 <p className="text-sm text-muted-foreground mb-6">
                   {products[2].description}
                 </p>
-                <TavusButton variant="outline" size="sm">
+                <InterLayerButton variant="outline" size="sm" onClick={() => window.open('https://drive.google.com/file/d/1t-ggNKYqC1FZau8Yo8WntLAqMuUL04oH/view?usp=sharing', '_blank')}>
                   {products[2].cta}
-                </TavusButton>
+                </InterLayerButton>
               </div>
             </WindowCard>
           </div>
@@ -116,9 +116,9 @@ export function ProductsSection() {
                   {products[1].description}
                 </p>
                 <Link to="/enterprise">
-                  <TavusButton variant="outline" size="sm">
+                  <InterLayerButton variant="outline" size="sm">
                     {products[1].cta}
-                  </TavusButton>
+                  </InterLayerButton>
                 </Link>
               </div>
             </WindowCard>

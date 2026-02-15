@@ -8,8 +8,8 @@ const iframeContainer = document.getElementById("iframeContainer");
 const externalLink = document.getElementById("externalLink");
 const placeholder = document.querySelector(".placeholder");
 const chatHistory = document.getElementById("chatHistory");
-const startTavusBtn = document.getElementById("startTavusBtn");
-const startTavusOverlay = document.getElementById("startTavusOverlay");
+const startAgentBtn = document.getElementById("startAgentBtn");
+const startAgentOverlay = document.getElementById("startAgentOverlay");
 const micBtn = document.getElementById("micBtn");
 
 // Refactored Speech Recognition for global access
@@ -126,13 +126,13 @@ function addToChat(message, sender = "system") {
     chatHistory.scrollTop = chatHistory.scrollHeight;
 }
 
-function resetTavusUI() {
-    if (startTavusOverlay) {
-        startTavusOverlay.style.display = "flex";
+function resetAgentUI() {
+    if (startAgentOverlay) {
+        startAgentOverlay.style.display = "flex";
     }
-    if (startTavusBtn) {
-        startTavusBtn.innerHTML = "Start Conversation";
-        startTavusBtn.disabled = false;
+    if (startAgentBtn) {
+        startAgentBtn.innerHTML = "Start Conversation";
+        startAgentBtn.disabled = false;
     }
 }
 
@@ -159,14 +159,14 @@ function cleanupDailyCall() {
         dailyCallObject = null;
     }
 
-    const videoContainer = document.getElementById("tavusVideoContainer");
+    const videoContainer = document.getElementById("interLayerVideoContainer");
     if (videoContainer) {
         videoContainer.innerHTML = "";
     }
 }
 
 function createVideoElement(participantId, isLocal = false) {
-    const videoContainer = document.getElementById("tavusVideoContainer");
+    const videoContainer = document.getElementById("interLayerVideoContainer");
 
     const wrapper = document.createElement("div");
     wrapper.id = `video-wrapper-${participantId}`;
@@ -392,14 +392,14 @@ function stopTranscription() {
     transcriptionStarted = false;
 }
 
-async function startTavusSession() {
-    startTavusBtn.innerHTML =
+async function startAgentSession() {
+    startAgentBtn.innerHTML =
         '<i class="fa-solid fa-spinner fa-spin"></i> Connecting...';
-    startTavusBtn.disabled = true;
-    log("Initializing Tavus session...", "info");
+    startAgentBtn.disabled = true;
+    log("Initializing Agent session...", "info");
 
     try {
-        const response = await fetch("/api/tavus/session", {
+        const response = await fetch("/api/agent/session", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -409,11 +409,11 @@ async function startTavusSession() {
 
         if (!response.ok) {
             const errData = await response.json();
-            throw new Error(errData.detail || "Failed to start Tavus session");
+            throw new Error(errData.detail || "Failed to start Agent session");
         }
 
         const data = await response.json();
-        log(`Tavus session created. URL: ${data.conversation_url}`, "success");
+        log(`Agent session created. URL: ${data.conversation_url}`, "success");
 
         if (!data.conversation_url) {
             throw new Error("No conversation_url returned from API");
@@ -425,7 +425,7 @@ async function startTavusSession() {
             );
         }
 
-        const videoContainer = document.getElementById("tavusVideoContainer");
+        const videoContainer = document.getElementById("interLayerVideoContainer");
         if (!videoContainer) {
             throw new Error("Video container element not found");
         }
@@ -440,7 +440,7 @@ async function startTavusSession() {
             log("Connection timeout - taking too long to connect", "error");
             addToChat("Connection timed out. Please try again.", "system");
             cleanupDailyCall();
-            resetTavusUI();
+            resetAgentUI();
         }, 30000);
 
         dailyCallObject.on("loading", (event) => {
@@ -477,8 +477,8 @@ async function startTavusSession() {
                 connectionTimeout = null;
             }
 
-            if (startTavusOverlay) {
-                startTavusOverlay.style.display = "none";
+            if (startAgentOverlay) {
+                startAgentOverlay.style.display = "none";
             }
 
             const localParticipant = event.participants.local;
@@ -561,7 +561,7 @@ async function startTavusSession() {
             log("Left meeting", "info");
             addToChat("Call ended.", "system");
             cleanupDailyCall();
-            resetTavusUI();
+            resetAgentUI();
         });
 
         dailyCallObject.on("active-speaker-change", (event) => {
@@ -590,7 +590,7 @@ async function startTavusSession() {
             console.error("Daily Error:", event);
             addToChat(`Error: ${errorMsg}`, "system");
             cleanupDailyCall();
-            resetTavusUI();
+            resetAgentUI();
         });
 
         log("Joining Daily room...", "info");
@@ -609,17 +609,17 @@ async function startTavusSession() {
             throw new Error(`Failed to join: ${joinError.message}`);
         }
     } catch (e) {
-        console.error("Tavus session error:", e);
-        log(`Tavus Error: ${e.message}`, "error");
+        console.error("Agent session error:", e);
+        log(`Agent Error: ${e.message}`, "error");
         addToChat(`Error: ${e.message}`, "system");
-        alert("Tavus Error: " + e.message);
+        alert("Agent Error: " + e.message);
         cleanupDailyCall();
-        resetTavusUI();
+        resetAgentUI();
     }
 }
 
-if (startTavusBtn) {
-    startTavusBtn.addEventListener("click", startTavusSession);
+if (startAgentBtn) {
+    startAgentBtn.addEventListener("click", startAgentSession);
 }
 
 function updateLiveView(url) {

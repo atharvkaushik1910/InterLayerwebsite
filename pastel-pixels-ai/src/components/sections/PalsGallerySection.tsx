@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { WindowCard } from "@/components/ui/window-card";
-import { TavusButton } from "@/components/ui/tavus-button";
+import { InterLayerButton } from "@/components/ui/interlayer-button";
 import { Home } from "lucide-react";
 import palNoah from "@/assets/pal-noah.png";
 import palDominic from "@/assets/pal-dominic.png";
@@ -94,9 +94,9 @@ export function PalsGallerySection() {
               </div>
               <div className="absolute bottom-4 right-4">
                 <a href={import.meta.env.VITE_SERVER_URL || "http://localhost:8000"} target="_blank" rel="noopener noreferrer">
-                  <TavusButton variant="coral" size="default">
+                  <InterLayerButton variant="coral" size="default">
                     TRY INTERLAYER AGENT
-                  </TavusButton>
+                  </InterLayerButton>
                 </a>
               </div>
             </div>

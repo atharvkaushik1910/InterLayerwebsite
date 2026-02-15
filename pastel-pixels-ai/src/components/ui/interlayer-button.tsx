@@ -32,7 +32,7 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
   VariantProps<typeof buttonVariants> { }
 
-const TavusButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
+const InterLayerButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, onMouseEnter, ...props }, ref) => {
     const audioRef = React.useRef<HTMLAudioElement | null>(null);
 
@@ -57,6 +57,6 @@ const TavusButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
     );
   }
 );
-TavusButton.displayName = "InterLayerButton";
+InterLayerButton.displayName = "InterLayerButton";
 
-export { TavusButton, buttonVariants };
+export { InterLayerButton, buttonVariants };

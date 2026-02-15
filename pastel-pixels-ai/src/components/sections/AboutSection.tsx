@@ -1,4 +1,4 @@
-import { TavusButton } from "@/components/ui/tavus-button";
+import { InterLayerButton } from "@/components/ui/interlayer-button";
 import aboutPerson from "@/assets/about-person-pixel.jpg";
 
 export function AboutSection() {
@@ -23,9 +23,9 @@ export function AboutSection() {
             <p className="text-lg leading-relaxed mb-8 text-foreground/80">
               InterLayer is an applied AI research & product lab pioneering human computing, teaching machines the art of being human. We build foundational models that let AI see, hear, respond and work like people do. We believe the day is not far when AI is truly able to replace humans even in the professions that traditionally require human touch. We're turning the promise of science fiction into reality, where computing feels instinctive and truly alive. Because the next intelligence is emotional.
             </p>
-            <TavusButton variant="outline" size="default">
+            <InterLayerButton variant="outline" size="default" onClick={() => window.open('https://drive.google.com/file/d/1t-ggNKYqC1FZau8Yo8WntLAqMuUL04oH/view?usp=sharing', '_blank')}>
               OUR MANIFESTO
-            </TavusButton>
+            </InterLayerButton>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TavusButton } from "@/components/ui/tavus-button";
+import { InterLayerButton } from "@/components/ui/interlayer-button";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
@@ -67,13 +67,12 @@ export function Navigation() {
 
         {/* Segment 3: Auth Buttons */}
         <div className="hidden lg:flex bg-card border-2 border-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] divide-x-2 divide-foreground h-12 pointer-events-auto">
-          <button className="flex items-center gap-2 px-6 text-sm font-bold hover:bg-muted transition-colors h-full">
+          <button
+            className="flex items-center gap-2 px-6 text-sm font-bold bg-coral hover:bg-coral/90 transition-colors h-full text-foreground"
+            onClick={() => window.open('https://calendly.com/atharvkaushik1910/new-meeting', '_blank')}
+          >
             <span className="w-1.5 h-1.5 bg-foreground" />
-            LOGIN
-          </button>
-          <button className="flex items-center gap-2 px-6 text-sm font-bold bg-coral hover:bg-coral/90 transition-colors h-full text-foreground">
-            <span className="w-1.5 h-1.5 bg-foreground" />
-            GET STARTED
+            JOIN THE QUEUE
           </button>
         </div>
 
@@ -107,11 +106,11 @@ export function Navigation() {
             </a>
           ))}
           <div className="flex flex-col gap-2 mt-4 pt-4 border-t-2 border-foreground">
-            <button className="flex items-center justify-center gap-2 px-6 py-3 text-sm font-bold border-2 border-foreground hover:bg-muted transition-colors w-full">
-              LOGIN
-            </button>
-            <button className="flex items-center justify-center gap-2 px-6 py-3 text-sm font-bold border-2 border-foreground bg-coral hover:bg-coral/90 transition-colors w-full">
-              GET STARTED
+            <button
+              className="flex items-center justify-center gap-2 px-6 py-3 text-sm font-bold border-2 border-foreground bg-coral hover:bg-coral/90 transition-colors w-full"
+              onClick={() => window.open('https://calendly.com/atharvkaushik1910/new-meeting', '_blank')}
+            >
+              JOIN THE QUEUE
             </button>
           </div>
         </div>

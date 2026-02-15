@@ -24,7 +24,7 @@ tavus_client = None
 if TAVUS_API_KEY:
     tavus_client = TavusClient(TAVUS_API_KEY)
 else:
-    print("WARNING: TAVUS_API_KEY not set. Tavus features will be disabled.")
+    print("WARNING: TAVUS_API_KEY not set. Video features will be disabled.")
 
 
 from fastapi.responses import FileResponse
@@ -50,7 +50,7 @@ class TaskRequest(BaseModel):
 class IntentRequest(BaseModel):
     query: str
 
-class TavusSessionRequest(BaseModel):
+class AgentSessionRequest(BaseModel):
     replica_id: str = None
     persona_id: str = None
     conversation_name: str = None
@@ -64,10 +64,10 @@ active_live_url = None
 active_task_id = None
 
 
-@app.post("/api/tavus/session")
-async def create_tavus_session(request: TavusSessionRequest):
+@app.post("/api/agent/session")
+async def create_agent_session(request: AgentSessionRequest):
     if not tavus_client:
-        raise HTTPException(status_code=500, detail="Tavus API Key not configured")
+        raise HTTPException(status_code=500, detail="Video API Key not configured")
     
     replica_id = request.replica_id or TAVUS_REPLICA_ID
     persona_id = request.persona_id or TAVUS_PERSONA_ID

@@ -1,4 +1,4 @@
-import { TavusButton } from "@/components/ui/tavus-button";
+import { InterLayerButton } from "@/components/ui/interlayer-button";
 
 import seamlessClouds from "@/assets/seamless_clouds.png";
 
@@ -93,9 +93,9 @@ export function HeroSection() {
             <p className="text-lg md:text-xl text-foreground/80 mb-8 max-w-md">
               AI now has the human touch. Interlayer builds emotional & proactive AI agents that can see, hear, understand human intent and interfaces, and act, run workflows, and operate software end-to-end.
             </p>
-            <TavusButton variant="coral" size="lg">
+            <InterLayerButton variant="coral" size="lg" onClick={() => window.open('https://calendly.com/atharvkaushik1910/new-meeting', '_blank')}>
               JOIN THE QUEUE
-            </TavusButton>
+            </InterLayerButton>
           </div>
 
           {/* Right Content - Video Cards */}

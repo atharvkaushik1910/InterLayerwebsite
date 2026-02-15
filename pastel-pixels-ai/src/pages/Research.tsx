@@ -131,7 +131,7 @@ export default function Research() {
                             <div className="bg-foreground text-card p-8 rounded-sm mt-8">
                                 <h3 className="font-serif text-2xl mb-4 text-coral">The InterLayer Turing Test</h3>
                                 <p className="text-card-foreground/90">
-                                    Unlike the classic Turing Test, which asks if a machine can pass as human, the Tavus version asks: <strong>does the AI feel human?</strong> Success means building rapport, showing empathy, and taking initiative—progressing from a simple “shell” (face and voice), to a “basic brain” (personality and conversation), and finally to an autonomous entity that remembers, reasons, and acts independently.
+                                    Unlike the classic Turing Test, which asks if a machine can pass as human, the InterLayer version asks: <strong>does the AI feel human?</strong> Success means building rapport, showing empathy, and taking initiative—progressing from a simple “shell” (face and voice), to a “basic brain” (personality and conversation), and finally to an autonomous entity that remembers, reasons, and acts independently.
                                 </p>
                             </div>
                         </div>
@@ -261,7 +261,7 @@ export default function Research() {
                         <p className="text-muted-foreground mb-8 text-lg">
                             Join the shift to human computing with InterLayer.
                         </p>
-                        <button className="bg-coral hover:bg-coral/90 text-white font-bold py-3 px-8 rounded-sm transition-colors uppercase tracking-widest text-sm" onClick={() => window.open('https://tavus.io/contact', '_blank')}>
+                        <button className="bg-coral hover:bg-coral/90 text-white font-bold py-3 px-8 rounded-sm transition-colors uppercase tracking-widest text-sm" onClick={() => window.open('https://calendly.com/atharvkaushik1910/new-meeting', '_blank')}>
                             Get Started
                         </button>
                     </div>

@@ -14,7 +14,7 @@ export default function ProductPage() {
                         FOR DEVELOPERS & ENTERPRISES
                     </p>
                     <h1 className="font-serif text-6xl md:text-8xl mb-8 leading-[1.05] tracking-tight">
-                        Power AI for your<br />business with Tavus
+                        Power AI for your<br />business with InterLayer
                     </h1>
                     <p className="text-2xl md:text-3xl text-[#1A1A1A] font-serif leading-relaxed max-w-3xl mx-auto">
                         Build, scale, and customize lifelike AI Video agents for your products and workflows.
@@ -26,7 +26,7 @@ export default function ProductPage() {
                     {/* Left Content */}
                     <div className="space-y-8">
                         <p className="text-lg leading-relaxed text-[#1A1A1A]/90">
-                            Our enterprise team helps you build, integrate, and deploy human-like AI Video agents into products, services, and workflows. Whether you choose to build and embed with our APIs, partner with us for a full deployment, or find the balance in between, Tavus offers flexible, scalable solutions designed to fit your workflow with managed, embedded, and white-labeled options built for scale.
+                            Our enterprise team helps you build, integrate, and deploy human-like AI Video agents into products, services, and workflows. Whether you choose to build and embed with our APIs, partner with us for a full deployment, or find the balance in between, InterLayer offers flexible, scalable solutions designed to fit your workflow with managed, embedded, and white-labeled options built for scale.
                         </p>
 
                         <div className="pt-8">
@@ -55,7 +55,7 @@ export default function ProductPage() {
                         <form className="space-y-6">
                             <div className="space-y-2">
                                 <label className="block font-mono text-sm font-bold uppercase">Work Email</label>
-                                <input type="email" placeholder="john.doe@tavus.io" className="w-full bg-[#F2EDE6] border border-[#1A1A1A]/20 rounded p-3 focus:outline-none focus:border-[#1A1A1A] transition-colors" />
+                                <input type="email" placeholder="john.doe@interlayer.ai" className="w-full bg-[#F2EDE6] border border-[#1A1A1A]/20 rounded p-3 focus:outline-none focus:border-[#1A1A1A] transition-colors" />
                             </div>
                             <div className="space-y-2">
                                 <label className="block font-mono text-sm font-bold uppercase">First Name</label>
@@ -92,14 +92,14 @@ export default function ProductPage() {
                             <div className="p-6 md:p-8 flex-1">
                                 <h3 className="font-serif text-4xl mb-6">White-labeled APIs</h3>
                                 <p className="text-sm leading-relaxed mb-8 font-medium">
-                                    Use Tavus technology under your own brand. Our APIs power enterprise-grade video agents with seamless conversation, voice, and video features behind the scenes.
+                                    Use InterLayer technology under your own brand. Our APIs power enterprise-grade video agents with seamless conversation, voice, and video features behind the scenes.
                                 </p>
                                 {/* Mock Code Window */}
                                 <div className="bg-[#FDF8F0] border-2 border-[#1A1A1A] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] p-4 font-mono text-[10px] overflow-hidden relative">
                                     <div className="absolute top-0 left-0 w-full h-1 bg-[#E5E5E5]"></div>
                                     <pre className="text-[#1A1A1A] overflow-x-hidden">
                                         <span className="text-red-500">curl</span> --request POST \<br />
-                                        &nbsp;&nbsp;--url https://tavusapi.com/v2/conversations \<br />
+                                        &nbsp;&nbsp;--url https://api.interlayer.ai/v2/conversations \<br />
                                         &nbsp;&nbsp;--header <span className="text-green-600">'Content-Type: application/json'</span> \<br />
                                         &nbsp;&nbsp;--header <span className="text-green-600">'x-api-key: &lt;api-key&gt;'</span> \<br />
                                         &nbsp;&nbsp;--data <span className="text-blue-600">'{"{"}</span><br />
@@ -127,7 +127,7 @@ export default function ProductPage() {
 
                                 <h3 className="font-serif text-4xl mb-6">Embedded solutions</h3>
                                 <p className="text-sm leading-relaxed font-medium">
-                                    Integrate Tavus directly into your product. Add a human-like presence to your app or platform with a seamless, native experience.
+                                    Integrate InterLayer directly into your product. Add a human-like presence to your app or platform with a seamless, native experience.
                                 </p>
                             </div>
                         </div>
@@ -138,7 +138,7 @@ export default function ProductPage() {
                             <div className="p-6 md:p-8 flex-1">
                                 <h3 className="font-serif text-4xl mb-6">Managed integrations</h3>
                                 <p className="text-sm leading-relaxed mb-8 font-medium">
-                                    We handle setup and optimization so your team can focus on results. Connect Tavus to your existing tools and workflows with minimal effort and reliable performance.
+                                    We handle setup and optimization so your team can focus on results. Connect InterLayer to your existing tools and workflows with minimal effort and reliable performance.
                                 </p>
                                 {/* Mock Workflow UI */}
                                 <div className="relative h-40 flex items-center justify-center">
@@ -166,7 +166,7 @@ export default function ProductPage() {
                 <div className="grid lg:grid-cols-2 gap-16 md:gap-32 mb-32 items-center">
                     <div>
                         <h2 className="font-serif text-6xl mb-8">What is a video agent?</h2>
-                        <p className="text-xl mb-8">Tavus video agents see, listen, and respond with real understanding. They can:</p>
+                        <p className="text-xl mb-8">InterLayer video agents see, listen, and respond with real understanding. They can:</p>
                         <ul className="space-y-2 mb-10 text-lg">
                             <li className="flex items-start gap-2"><span className="mt-2 w-1.5 h-1.5 bg-black rounded-full shrink-0" /> Handle thousands of conversations simultaneously with consistent EQ</li>
                             <li className="flex items-start gap-2"><span className="mt-2 w-1.5 h-1.5 bg-black rounded-full shrink-0" /> Automate coaching, onboarding, and customer service with a human touch</li>
@@ -175,10 +175,10 @@ export default function ProductPage() {
                             <li className="flex items-start gap-2"><span className="mt-2 w-1.5 h-1.5 bg-black rounded-full shrink-0" /> Build trust and rapport, not just efficiency</li>
                         </ul>
                         <div className="flex gap-4">
-                            <button className="bg-[#FF6B8B] px-6 py-3 border-2 border-black font-bold text-xs uppercase tracking-wider hover:bg-[#FF6B8B]/90 transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                            <button className="bg-[#FF6B8B] px-6 py-3 border-2 border-black font-bold text-xs uppercase tracking-wider hover:bg-[#FF6B8B]/90 transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]" onClick={() => window.open('https://calendly.com/atharvkaushik1910/new-meeting', '_blank')}>
                                 LEARN MORE
                             </button>
-                            <button className="bg-[#F2EDE6] px-6 py-3 border-2 border-black font-bold text-xs uppercase tracking-wider hover:bg-white transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                            <button className="bg-[#F2EDE6] px-6 py-3 border-2 border-black font-bold text-xs uppercase tracking-wider hover:bg-white transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]" onClick={() => window.open('https://drive.google.com/file/d/1t-ggNKYqC1FZau8Yo8WntLAqMuUL04oH/view?usp=sharing', '_blank')}>
                                 SEE DOCS
                             </button>
                         </div>
@@ -213,7 +213,7 @@ export default function ProductPage() {
                         <div className="absolute bottom-0 right-32 w-2/3 bg-[#545263] border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] z-30 text-[#8EFFA0] font-mono text-xs p-1">
                             <div className="bg-white text-black text-[10px] inline-block px-1 mb-2 border border-black">FEATURE</div>
                             <div className="p-4 pt-2">
-                                tavus_Features {"{"}<br />
+                                interLayer_Features {"{"}<br />
                                 &nbsp;&nbsp;Langues: 30+<br />
                                 &nbsp;&nbsp;RAG: On,<br />
                                 &nbsp;&nbsp;Memory: On,<br />
@@ -258,13 +258,13 @@ export default function ProductPage() {
                     <div className="order-1 lg:order-2">
                         <h2 className="font-serif text-6xl mb-8 leading-tight">Performance and reliability</h2>
                         <p className="text-xl mb-8 leading-relaxed">
-                            Best-in-class enterprise performance and reliability define every Tavus video agent. Built for real-time video, voice, and perception, they deliver human-level intelligence with sub-second latency and enterprise uptime guarantees. Fully out of the box, yet customizable with your existing stack, each system includes built-in LLMs, speech, and vision capabilities. They're ready to scale on day one.
+                            Best-in-class enterprise performance and reliability define every InterLayer video agent. Built for real-time video, voice, and perception, they deliver human-level intelligence with sub-second latency and enterprise uptime guarantees. Fully out of the box, yet customizable with your existing stack, each system includes built-in LLMs, speech, and vision capabilities. They're ready to scale on day one.
                         </p>
                         <div className="flex gap-4">
-                            <button className="bg-[#F2EDE6] px-6 py-3 border-2 border-black font-bold text-xs uppercase tracking-wider hover:bg-white transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                            <button className="bg-[#F2EDE6] px-6 py-3 border-2 border-black font-bold text-xs uppercase tracking-wider hover:bg-white transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]" onClick={() => window.open('https://drive.google.com/file/d/1t-ggNKYqC1FZau8Yo8WntLAqMuUL04oH/view?usp=sharing', '_blank')}>
                                 SEE DOCS
                             </button>
-                            <button className="bg-[#FF6B8B] px-6 py-3 border-2 border-black font-bold text-xs uppercase tracking-wider hover:bg-[#FF6B8B]/90 transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                            <button className="bg-[#FF6B8B] px-6 py-3 border-2 border-black font-bold text-xs uppercase tracking-wider hover:bg-[#FF6B8B]/90 transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]" onClick={() => window.open('https://calendly.com/atharvkaushik1910/new-meeting', '_blank')}>
                                 GET STARTED FOR FREE
                             </button>
                         </div>
