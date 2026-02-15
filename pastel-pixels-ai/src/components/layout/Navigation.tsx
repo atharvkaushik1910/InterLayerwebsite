@@ -37,7 +37,7 @@ export function Navigation() {
               <a
                 key={item.label}
                 href={item.href}
-                className="flex items-center gap-2 px-6 text-sm font-bold hover:bg-muted transition-colors relative group h-full"
+                className="flex items-center gap-2 px-6 text-sm font-bold hover:bg-coral hover:text-white transition-colors relative group h-full"
               >
                 {item.badge && (
                   <span className="absolute top-1 right-1 bg-coral text-[8px] px-1 py-[1px] border border-foreground leading-none">
@@ -96,7 +96,7 @@ export function Navigation() {
               href={item.href}
               target={item.target}
               rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
-              className="flex items-center gap-2 px-4 py-3 text-sm font-bold border-2 border-transparent hover:border-foreground hover:bg-muted transition-all"
+              className="flex items-center gap-2 px-4 py-3 text-sm font-bold border-2 border-transparent hover:border-foreground hover:bg-coral hover:text-white transition-all"
               onClick={() => setMobileMenuOpen(false)}
             >
               {item.hasIndicator && (
